@@ -1,4 +1,8 @@
-%global __os_install_post %(echo '%{__os_install_post}' | sed -e 's!/usr/lib[^[:space:]]*/brp-python-bytecompile[[:space:]].*$!!g')
+%global __os_install_post %{nil}
+%define debug_package %{nil}
+%define __os_install_post %{nil}
+
+
 
 
 # This is a sample spec file for bazel
@@ -31,17 +35,17 @@ PSLQ Compilation of bazel
  
  
 %build
-./compile.sh
-./output/bazel build //scripts:bazel-complete.bash
-./output/bazel shutdown
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/ibm/xlf/15.1.6/bin:/opt/ibm/xlC/13.1.6/bin:/root/bin" ./compile.sh
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/ibm/xlf/15.1.6/bin:/opt/ibm/xlC/13.1.6/bin:/root/bin" ./output/bazel build //scripts:bazel-complete.bash
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/ibm/xlf/15.1.6/bin:/opt/ibm/xlC/13.1.6/bin:/root/bin" ./output/bazel shutdown
 echo 'export PATH="/opt/oss-mldl/bin:${PATH}"' > profile.sh
 
  
 %install
 install -d -o root -g root -m 0755 %{buildroot}/opt/oss-mldl/bin %{buildroot}/etc/profile.d
-install -o root -g root -m 0755 output/bazel  %{buildroot}/opt/oss-mldl/bin
+cp output/bazel  %{buildroot}/opt/oss-mldl/bin
 install -o root -g root -m 555 profile.sh %{buildroot}/etc/profile.d/bazel-pslq.sh
 
 %files
-/opt/oss-mldl/bin/*
-/etc/profile.d/bazel-pslq.sh
+%attr(0755,root,root)  /opt/oss-mldl/bin/bazel
+%attr(0755,root,root)  /etc/profile.d/bazel-pslq.sh
