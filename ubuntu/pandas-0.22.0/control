@@ -1,0 +1,12 @@
+Package: pandas-pslq
+Version: 0.22.0
+Architecture: ppc64el
+Maintainer: Paulo Queiroz <paulo.sergio.lemes.queiroz@gmail.com>
+Depends: python3-pslq
+Installed-Size: in_kb
+Homepage: https://github.com/pslq
+Description: PSLQ Compilation of pandas on top of Advance Toolchain and IBM mathematical Libraries
+ For more information about this package, please check: https://github.com/pslq/tools
+ WARNING:
+  This package have been made for educational purposes, there is no support of anykind implicit on it
+  For a supported solution it's advisable to look for either the distrivution packages or IBM's Advance Toolchain

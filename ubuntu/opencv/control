@@ -1,0 +1,12 @@
+Package: opencv-pslq
+Version: 3.4.0
+Architecture: ppc64el
+Maintainer: Paulo Queiroz <paulo.sergio.lemes.queiroz@gmail.com>
+Depends: advance-toolchain-at10.0-runtime, python3-pslq, libavcodec-ffmpeg56, libavformat-ffmpeg56, libavresample-ffmpeg2, libavutil-ffmpeg54, libbluray1, libbz2-1.0, libcomerr2, libexif12, libexpat1, libffi6, libfontconfig1, libfreetype6, libgcrypt20, libgme0, libgmp10, libgnutls30, libgpg-error0, libgphoto2-6, libgphoto2-port12, libgsm1, libgssapi-krb5-2, libhogweed4, libicu55, libidn11, libjasper1, libjbig0, libjpeg-turbo8, libk5crypto3, libkeyutils1, libkrb5-3, libkrb5support0, libltdl7, liblzma5, libmodplug1, libmp3lame0, libnettle6, libnuma1, libogg0, libopenjpeg5, libopus0, liborc-0.4-0, libp11-kit0, libpng12-0, librtmp1, libschroedinger-1.0-0, libshine3, libsnappy1v5, libsoxr0, libspeex1, libssh-gcrypt-4, libswresample-ffmpeg1, libswscale-ffmpeg3, libtasn1-6, libtheora0, libtiff5, libtwolame0, libva1, libvorbis0a, libvorbisenc2, libvpx3, libwavpack1, libwebp5, libx264-148, libx265-79, libxml2, libxvidcore4, libzvbi0, openblas-pslq
+Installed-Size: in_kb
+Homepage: https://github.com/pslq
+Description: PSLQ Compilation of opencv on top of Advance Toolchain and IBM mathematical Libraries
+ For more information about this package, please check: https://github.com/pslq/tools
+ WARNING:
+  This package have been made for educational purposes, there is no support of anykind implicit on it
+  For a supported solution it's advisable to look for either the distrivution packages or IBM's Advance Toolchain
